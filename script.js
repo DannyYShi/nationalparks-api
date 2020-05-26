@@ -24,7 +24,7 @@ function displayResults (responseJson){
 function getParks(location, maxResults=10){
     const params = {
         key: apiKey,
-        q: location,
+        stateCode: location,
         limit: maxResults
     }
     const queryString = formatQueryParams(params);
