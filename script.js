@@ -12,7 +12,7 @@ function displayResults (responseJson){
     console.log(responseJson);
     $('#results-list').empty();
     for (let i = 0; i < responseJson.data.length; i++){
-        if (responseJson.data[i].states == $('#location').val(){
+        if (responseJson.data[i].states == $('#location').val()){
             $('#results-list').append(
                 `<li><h3>${responseJson.data[i].fullName}</h3>
                 <a href='${responseJson.data[i].url}'>${responseJson.data[i].url}</a>
