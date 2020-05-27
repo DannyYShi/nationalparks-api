@@ -12,13 +12,13 @@ function displayResults(responseJson) {
   console.log(responseJson);
   $('#results-list').empty();
   for (let i = 0; i < responseJson.data.length; i++) {
-   if (responseJson.data[i].states == $('#location').val().toUpperCase()){
+   //if (responseJson.data[i].states == $('#location').val().toUpperCase()){
        $('#results-list').append(
       `<li><h3>${responseJson.data[i].fullName}</h3>
             <a href='${responseJson.data[i].url}'>${responseJson.data[i].url}</a>
             <p>${responseJson.data[i].description}</p>
             </li>`)
-    }
+  //  }
   }
   $('#results').removeClass('hidden');
 }
