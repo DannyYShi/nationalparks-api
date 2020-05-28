@@ -12,13 +12,11 @@ function displayResults(responseJson) {
   console.log(responseJson);
   $('#results-list').empty();
   for (let i = 0; i < responseJson.data.length; i++) {
-   //if (responseJson.data[i].states == $('#location').val().toUpperCase()){
-       $('#results-list').append(
+    $('#results-list').append(
       `<li><h3>${responseJson.data[i].fullName}</h3>
             <a href='${responseJson.data[i].url}'>${responseJson.data[i].url}</a>
             <p>${responseJson.data[i].description}</p>
             </li>`)
-  //  }
   }
   $('#results').removeClass('hidden');
 }
@@ -26,7 +24,7 @@ function displayResults(responseJson) {
 function getParks(location, maxResults = 10) {
   const params = {
     key: apiKey,
-    stateCode: location,
+    stateCode: $('#location').val(),
     limit: maxResults
   }
   const queryString = formatQueryParams(params);
